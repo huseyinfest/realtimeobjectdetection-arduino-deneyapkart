@@ -1,0 +1,53 @@
+BU PROJE HÜSEYİN EREN'E AİTTİR.
+YouTube:huseyinfest
+Github:huseyinfest
+Instagram:huseyinfest
+
+
+PROJE AŞAMALARI
+
+1)İlk adım olarak bilgisayarımıza PYTHON yüklüyoruz.
+
+2)İkinci adımda gerekli kütüphaneleri kurmak için PİP komutunu kullanmamız gerekiyor. Bunun için şu kodu komut satırında çalıştırıyoruz.
+
+python -m pip install --upgrade pip
+
+3)Sonrasında gerekli kütüphaneleri komut istemcisi yardımı ile tek tek indiriyoruz.
+
+pip install opencv-python
+pip install pyserial
+pip install ultralytics
+
+4)Arduino IDE programını yükleyip kuruyoruz.
+
+5)CH340 veya SiliconLabs driverlarını yükleyip kuruyoruz.
+
+CH340: https://akademi.robolinkmarket.com/Data/EditorFiles/downloads/CH34x_Install_Windows_v3_4.zip
+
+SiliconLabs: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers (Windows Universal Driver)
+
+6)Ardından LiquidCrystal_I2C.h kütüphanesini yüklüyoruz.
+
+7)Ardından kartımız ve LCD ekran arasında ki bağlantıları yapıyoruz.
+
+!!!PROJE BOYUNCA SERİ PORT AÇILMAMALIDIR!!!
+
+8) Examples>Wire>I2C_Scanner adlı kodu açıp LCD ekranımızın adresini öğreniyoruz.
+
+9)Ardından kodu Arduino programında açıyoruz veya kopyala yapıştır yapıyoruz. Kodda lcd ekran adresi gibi düzeltmemiz gereken yerleri düzeltiyoruz. Doğru kart ve portu seçtikten sonra ilk başta karta kodumuzu yüklüyoruz.
+
+10)Ardından Python koduna geçiyoruz. İstenilen IDE kullanılabilir ben VSCode kullandım.
+
+11)İlk başta aşağıda verilen kodu çalıştırıp modelimizi yüklüyoruz.
+
+from ultralytics import YOLO
+
+# Modeli indir ve kullan
+model = YOLO('yolov8n.pt')
+
+12)Ardından verilen kodu açıp gerekli kısımları düzeltiyoruz.
+
+13)Son adım olarak LCD ekran da hazir yazıyorsa python kodunu çalıştırıyoruz ve projemiz hazır.
+
+YAŞANILAN PROBLEMLER İÇİN İLETİŞİME GEÇEBİLİRSİNİZ
+
